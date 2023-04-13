@@ -26,11 +26,6 @@ public class UrlShortenerControllerImpl implements UrlShortenerContoller {
 	@Autowired
 	private UrlShortenerService urlShortenerService;
 
-	@GetMapping("/api/shorturl")
-	public void lol() {
-		
-	}
-	
 	@Override
 	@PostMapping("/api/shorturl")
 	public ResponseEntity<UrlModel> getShortUrlModel(@RequestBody String url) throws NoSuchAlgorithmException, UnsupportedEncodingException {

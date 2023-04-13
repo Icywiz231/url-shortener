@@ -6,15 +6,9 @@
 </head>
 <body>
     <h1>Url Shortener</h1>
-	<form action="#" th:action="@{/api/shorturl}" th:onject="${urlModel}" method="post">
+	<form action="http://localhost:8081/api/shorturl" th:action="@{/api/shorturl}" th:object="${urlModel}" method="post">
         <p>Long Url: <input type="text" th:field="*{url}" /></p>
         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-        
-        <p>Short Url: <input type="text" th:field="*{hashCode}" /></p>
-    <button type="submit" form="submitButton" value="Submit">Submit</button>    
-    </form>
-    
-	
-    
+    </form>    
 </body>
 </html>
