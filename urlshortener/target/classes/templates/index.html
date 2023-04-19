@@ -1,20 +1,14 @@
 <!DOCTYPE HTML>
-<html xmlns:th="https://www.thymeleaf.org">
-<head> 
-    <title>Getting Started: Handling Form Submission</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html>
+<head>
+	<title>Short Url Generator</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <h1>Url Shortener</h1>
-	<form action="#" th:action="@{/api/shorturl}" th:onject="${urlModel}" method="post">
-        <p>Long Url: <input type="text" th:field="*{url}" /></p>
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-        
-        <p>Short Url: <input type="text" th:field="*{hashCode}" /></p>
-    <button type="submit" form="submitButton" value="Submit">Submit</button>    
-    </form>
-    
-	
-    
+	<form action="http://localhost:8081/api/shorturl" method="POST">
+		<label for="textInput">Long Url:</label> 
+		<input type="text" id="textInput" name="textInput"> <br>
+		<button type="submit">Submit</button>
+	</form>
 </body>
 </html>
